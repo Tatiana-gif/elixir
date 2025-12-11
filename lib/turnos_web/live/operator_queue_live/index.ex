@@ -65,15 +65,13 @@ defmodule TurnosWeb.OperatorQueueLive.Index do
     <Layouts.app flash={@flash} current_scope={@current_scope}>
       <div class="container mx-auto p-4">
         <h1 class="text-2xl font-bold mb-4">Mis Turnos Pendientes</h1>
-        
-        <p class="text-gray-500">Turnos asignados esperando tu acción</p>
-        
+
+
         <div class="mt-4">
           <%= if Enum.empty?(@pending_queues) do %>
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-blue-700">
               <p class="font-semibold">No tienes turnos pendientes</p>
-              
-              <p class="text-sm">Los turnos aparecerán aquí cuando se registren para tu módulo</p>
+
             </div>
           <% else %>
             <div class="space-y-3">
@@ -81,14 +79,14 @@ defmodule TurnosWeb.OperatorQueueLive.Index do
                 <div class="p-4 border-l-4 border-orange-500 rounded bg-white shadow-sm flex justify-between items-center">
                   <div>
                     <p class="text-2xl font-bold text-gray-900">Turno {q.number}</p>
-                    
+
                     <p class="text-sm text-gray-500">Módulo: {q.module}</p>
-                    
+
                     <span class="inline-block mt-2 px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">
                       Pendiente
                     </span>
                   </div>
-                  
+
                   <button
                     phx-click="call_next"
                     phx-value-queue_id={q.id}

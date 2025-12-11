@@ -11,7 +11,6 @@ defmodule TurnosWeb.AdminAccessLive do
     assigns = assign(assigns, :current_scope, %{})
 
     ~H"""
-    <Layouts.app flash={@flash} current_scope={@current_scope}>
     <div style="background-image: url('/images/example.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
 
       <div class="min-h-screen flex items-center justify-center ">
@@ -38,7 +37,7 @@ defmodule TurnosWeb.AdminAccessLive do
 
             <button
               type="submit"
-              class="mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
+              class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
             >
               Acceder
             </button>
@@ -50,7 +49,6 @@ defmodule TurnosWeb.AdminAccessLive do
         </div>
       </div>
       </div>
-    </Layouts.app>
     """
   end
 end

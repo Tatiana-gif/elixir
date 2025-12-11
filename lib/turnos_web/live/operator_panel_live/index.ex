@@ -52,7 +52,7 @@ defmodule TurnosWeb.OperatorPanelLive.Index do
                 <h1 class="text-3xl font-bold text-gray-900">Panel del Operador</h1>
 
                 <p class="text-gray-600 mt-1">
-                  Bienvenido de vuelta, <span class="font-semibold">{@operator_name}</span>
+                  Bienvenido de vuelta <span class="font-semibold">{@operator_name}</span>
                 </p>
               </div>
             </div>
@@ -62,24 +62,21 @@ defmodule TurnosWeb.OperatorPanelLive.Index do
         <div class="container mx-auto px-3 py-6 relative z-10">
           <!-- Stats Cards -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-blue-200 rounded-lg shadow p-6 border-l-6 border-blue-500">
+            <div class="bg-blue-500/50 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-lg shadow p-6 border-l-6 border-blue-500">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-gray-600 text-sm font-medium">Turnos Pendientes</p>
-
-                  <p class="text-4xl font-bold text-gray-900 mt-2">{@attending_count}</p>
+                  <p class="text-black-600 text-sm font-medium">Turnos Pendientes</p>
+                  <p class="text-4xl font-bold text-black-900 mt-2">{@pending_count}</p>
                 </div>
-
                 </div>
-
             </div>
 
-            <div class="bg-green-200 rounded-lg shadow p-6 border-l-4 border-green-500">
+            <div class="bg-green-500/50 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-lg shadow p-6 border-l-4 border-green-500">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-gray-600 text-sm font-medium">En Atención</p>
+                  <p class="text-black-600 text-sm font-medium">En Atención</p>
 
-                  <p class="text-4xl font-bold text-gray-900 mt-2">0</p>
+                  <p class="text-4xl font-bold text-black-900 mt-2">{@attending_count}</p>
                 </div>
 
                 <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -94,12 +91,12 @@ defmodule TurnosWeb.OperatorPanelLive.Index do
               </div>
             </div>
 
-            <div class="bg-purple-200 rounded-lg shadow p-6 border-l-4 border-purple-500">
+            <div class="bg-purple-500/50 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-lg shadow p-6 border-l-4 border-purple-500">
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-gray-600 text-sm font-medium">Completados Hoy</p>
+                  <p class="text-black-600 text-sm font-medium">Completados Hoy</p>
 
-                  <p class="text-4xl font-bold text-gray-900 mt-2">{@pending_count}</p>
+                  <p class="text-4xl font-bold text-black-900 mt-2">0</p>
                 </div>
 
                 <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">

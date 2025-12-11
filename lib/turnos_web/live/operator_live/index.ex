@@ -114,7 +114,7 @@ defmodule TurnosWeb.OperatorLive.Index do
         <div class="bg-white rounded-lg shadow mb-8">
           <div class="bg-green-50 border-b border-green-200 px-6 py-4">
             <h2 class="text-lg font-bold text-green-900">
-              ✓ Operadores Activos ({Enum.count(@operators, &(&1.status == "active"))})
+               Operadores Activos ({Enum.count(@operators, &(&1.status == "active"))})
             </h2>
           </div>
 
@@ -208,7 +208,7 @@ defmodule TurnosWeb.OperatorLive.Index do
         <div class="bg-white rounded-lg shadow">
           <div class="bg-gray-50 border-b border-gray-200 px-6 py-4">
             <h2 class="text-lg font-bold text-gray-900">
-              ⏸ Operadores Inactivos ({Enum.count(@operators, &(&1.status != "active"))})
+              Operadores Inactivos ({Enum.count(@operators, &(&1.status != "active"))})
             </h2>
           </div>
 

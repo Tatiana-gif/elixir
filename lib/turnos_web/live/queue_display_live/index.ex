@@ -21,14 +21,14 @@ defmodule TurnosWeb.QueueDisplayLive.Index do
     ~H"""
 
     <img src={~p"/images/tcs-logo-left.svg"} width="80" />
-    <div style="background-image: url('/images/example.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
+    <div style="background-image: url('/images/imagen_olas.gif'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
 
     <div class="container mx-auto p-4">
       <h1 class="text-3xl font-bold mb-4 text-center">TURNOS EN PANTALLA</h1>
       <!-- Sección tabla -->
-      <div class="bg-white rounded-lg shadow mb-8">
-        <div class="bg-green-50 border-b border-green-200 px-6 py-4">
-          <h2 class="text-lg font-bold text-green-900">Registro de turnos</h2>
+      <div class="bg-blue-500/30 rounded-lg shadow mb-8">
+        <div class="bg-blue-500/80 border-b border-green-200 px-6 py-4">
+          <h2 class="text-lg font-bold text-black-900">Registro de turnos</h2>
         </div>
 
         <div class="overflow-x-auto">
@@ -44,9 +44,9 @@ defmodule TurnosWeb.QueueDisplayLive.Index do
             <tbody>
               <%= for turno <- @turnos do %>
                 <tr>
-                  <td class="px-6 py-4 text-sm text-gray-800">{turno.module}</td>
+                  <td class="px-6 py-4 text-sm text-black-800">{turno.module}</td>
 
-                  <td class="px-6 py-4 text-sm text-gray-800">{turno.number}</td>
+                  <td class="px-6 py-4 text-sm text-black-800">{turno.number}</td>
                 </tr>
               <% end %>
             </tbody>

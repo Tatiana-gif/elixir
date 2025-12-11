@@ -28,7 +28,7 @@ defmodule TurnosWeb.Router do
   scope "/", TurnosWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", LandingLive
     live "/display", QueueDisplayLive.Index
     live "/turnos", QueueDisplayLive.Index
     live "/register", RegisterQueueLive

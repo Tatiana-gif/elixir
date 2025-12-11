@@ -12,12 +12,11 @@ defmodule TurnosWeb.OperatorLoginLive do
 
     ~H"""
 
-    <Layouts.app flash={@flash} current_scope={@current_scope}>
     <div style="background-image: url('/images/example.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
 
       <div class="min-h-screen flex items-center justify-center">
         <div class="bg-white border border-black rounded-lg shadow-xl p-8 w-full max-w-md">
-          <h1 class="text-3xl font-bold text-center mb-2 text-gray-800">Turnos</h1>
+          <h1 class="text-3xl font-bold text-center mb-2 text-gray-800">Operadores</h1>
 
 
           <%= if @error do %>
@@ -66,7 +65,6 @@ defmodule TurnosWeb.OperatorLoginLive do
         </div>
       </div>
       </div>
-    </Layouts.app>
     """
   end
 end

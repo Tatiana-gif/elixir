@@ -69,9 +69,13 @@ defmodule TurnosWeb.RegisterQueueLive do
 
     ~H"""
     <div style="background-image: url('/images/example.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
+       <br>
+       <br>
+       <br>
 
       <div class="container mx-auto p-6 max-w-md">
         <div class="bg-white rounded-lg shadow-lg p-8">
+
           <h1 class="text-3xl font-bold mb-2 text-gray-900">Registrar Turno</h1>
 
           <p class="text-gray-600 mb-6">Asigna un turno al módulo correspondiente</p>
