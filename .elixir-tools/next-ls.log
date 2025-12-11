@@ -13399,3 +13399,9 @@ This will trigger a full recompilation in order to re-index your codebase.
 14:41:35.160 id=2468 [debug] handled request client -> server textDocument/codeAction in 820µs
 
 14:41:35.211 id=2469 [debug] handled request client -> server textDocument/documentSymbol in 2ms
+
+14:48:54.023 [debug] handled notification client -> server $/cancelRequest in 615µs
+
+14:48:56.558 [debug] handled notification client -> server $/cancelRequest in 307µs
+
+14:48:56.899 [debug] handled notification client -> server $/cancelRequest in 1ms
