@@ -11,6 +11,8 @@ defmodule TurnosWeb.AdminAccessLive do
     assigns = assign(assigns, :current_scope, %{})
 
     ~H"""
+    <img src={~p"/images/tcs-logo-left.svg"} width="120" />
+
     <div style="background-image: url('/images/example.png'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
 
       <div class="min-h-screen flex items-center justify-center ">

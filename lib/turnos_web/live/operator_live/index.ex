@@ -81,27 +81,30 @@ defmodule TurnosWeb.OperatorLive.Index do
 
           <button
             phx-click="show-form"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition"
+            class="bg-blue-600 hover:bg-white-700 text-white px-6 py-2 rounded-lg font-medium transition"
           >
             + Nuevo Operador
           </button>
           <div class="flex items-center gap-3"></div>
         </div>
 
+   
+
         <%= if @show_form do %>
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <div class="flex justify-between items-center mb-4">
-              <h2 class="text-xl font-bold">
+          <div class="bg-white-700 rounded-lg p-6 mb-6">
+            <div class="flex justify-between items-center mb-4 bg-black-50 ">
+              <h2 class="text-xl bg-white-50">
                 {if @editing_operator, do: "Editar Operador", else: "Crear Nuevo Operador"}
               </h2>
 
               <button
                 phx-click="hide-form"
-                class="text-gray-500 hover:text-gray-700 text-2xl"
+                class="text-black-500 hover:text-black-700 text-2xl"
               >
                 ×
               </button>
             </div>
+
 
             <.live_component
               module={TurnosWeb.OperatorLive.FormComponent}

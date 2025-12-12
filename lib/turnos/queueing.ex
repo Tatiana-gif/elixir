@@ -33,6 +33,63 @@ defmodule Turnos.Queueing do
   end
 
   @doc """
+  Count pending queues assigned to a specific operator.
+  """
+  def count_pending_for_operator(operator_id) do
+    import Ecto.Query, warn: false
+
+    Repo.one(
+      from q in Queue,
+        where: q.operator_id == ^operator_id and q.status == "pending",
+        select: count(q.id)
+    ) || 0
+  end
+
+  @doc """
+  Count queues being attended by a specific operator.
+  """
+  def count_attending_for_operator(operator_id) do
+    import Ecto.Query, warn: false
+
+    Repo.one(
+      from q in Queue,
+        where: q.operator_id == ^operator_id and q.status == "attending",
+        select: count(q.id)
+    ) || 0
+  end
+
+  @doc """
+  Count all queues assigned to a specific operator.
+  """
+  def count_all_for_operator(operator_id) do
+    import Ecto.Query, warn: false
+
+    Repo.one(
+      from q in Queue,
+        where: q.operator_id == ^operator_id,
+        select: count(q.id)
+    ) || 0
+  end
+
+  @doc """
+  Count queues completed today by a specific operator.
+  """
+  def count_completed_today_for_operator(operator_id) do
+    import Ecto.Query, warn: false
+
+    Repo.one(
+      from q in Queue,
+        where:
+          q.operator_id == ^operator_id and not is_nil(q.completed_at) and
+            fragment(
+              "DATE(?) = CURRENT_DATE",
+              q.completed_at
+            ),
+        select: count(q.id)
+    ) || 0
+  end
+
+  @doc """
   Preassign up to `count` pending turnos to an operator (status -> "assigned").
   Returns the list of assigned queues.
   """
@@ -103,6 +160,22 @@ defmodule Turnos.Queueing do
       queue ->
         queue
         |> Queue.changeset(%{status: "attending"})
+        |> Repo.update()
+        |> broadcast_change()
+    end
+  end
+
+  @doc """
+  Mark a queue as completed.
+  """
+  def mark_completed(queue_id) do
+    case Repo.get(Queue, queue_id) do
+      nil ->
+        {:error, :not_found}
+
+      queue ->
+        queue
+        |> Queue.changeset(%{status: "completed", completed_at: DateTime.utc_now()})
         |> Repo.update()
         |> broadcast_change()
     end

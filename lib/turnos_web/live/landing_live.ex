@@ -26,7 +26,7 @@ defmodule TurnosWeb.LandingLive do
             <!-- Botón Admin -->
             <.link
               navigate={~p"/gestion/admin/acceso"}
-              class="group flex flex-col items-center justify-center p-8 rounded-xl bg-green-500/50  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 transition duration-300 border-2 border-black-300 hover:border-green-500 "
+              class="group flex flex-col items-center justify-center p-8 rounded-xl bg-green-500/50  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 transition duration-300 border-2 border-black-300 hover:border-green-500  "
             >
               <div class="text-5xl mb-4"></div>
               <h2 class="text-2xl font-bold text-black-900 mb-2">Administrador</h2>

@@ -20,7 +20,7 @@ defmodule TurnosWeb.QueueDisplayLive.Index do
 
     ~H"""
 
-    <img src={~p"/images/tcs-logo-left.svg"} width="80" />
+    <img src={~p"/images/tcs-logo-left.svg"} width="120" />
     <div style="background-image: url('/images/imagen_olas.gif'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; ">
 
     <div class="container mx-auto p-4">
